@@ -2,8 +2,9 @@
     <input
       type="text"
       name="termino"
-      placeholder="buscar país....."
+      placeholder="Buscar país ..."
       [(ngModel)]="termino"
       (input)="teclaPresionada( $event )"
+      [placeholder]="placeholder"
     />
   </form>
