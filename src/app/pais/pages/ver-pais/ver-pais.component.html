@@ -9,55 +9,76 @@
     </div>
 
     <div class="row">
-
       <div class="col-4">
         <h3>Bandera</h3>
         <img [src]="pais.flag" alt="bandera" class="img-thumbnail" />
       </div>
 
-
       <div class="col">
         <h3>Informacíon</h3>
         <ul>
           <li class="list-group-item">
-            <strong>Población</strong> {{ pais.population | number }}
+            <strong>Capital </strong> {{ pais.capital }}
           </li>
           <li class="list-group-item">
-            <strong>Código numerico</strong> {{ pais.numericCode }}
+            <strong>Población </strong> {{ pais.population | number }}
           </li>
           <li class="list-group-item">
-            <strong>Código numerico</strong> {{ pais.numericCode }}
+            <strong>Nombre Nativo</strong> {{ pais.nativeName }}
           </li>
           <li class="list-group-item">
-            <strong>Prefijo Telefonico</strong> {{ pais.callingCodes }}
+            <strong>Region</strong> {{ pais.region }}
           </li>
+          <li class="list-group-item">
+            <strong>Prefijo telefonico</strong> {{ pais.callingCodes }}
+          </li>
+          <li class="list-group-item">
+            <strong>Moneda </strong> {{ pais.currencies[0].name}} <code class="currencyinput">{{ pais['currencies'][0]['symbol']}}</code>
+          </li>
+          <li class="list-group-item">
+            <strong>Coeficiente de gini </strong> {{ pais.gini}} 
+          </li>
+          <!--           <li class="list-group-item">
+            <strong>Moneda simbolo</strong> {{ pais.currencies.symbol }}
+          </li> -->
         </ul>
       </div>
-
     </div>
-
 
     <h3>Traducciones</h3>
 
     <div class="row">
-        <div class="col">
-            
-            <span class="badge bg-primary mr-1">Del Aleman: {{ pais.translations.de }} </span>
-            <span class="badge bg-primary mr-1">Del Español: {{ pais.translations.es }}</span>
-            <span class="badge bg-primary mr-1">Del Francés: {{ pais.translations.fr }}</span>
-            <span class="badge bg-primary mr-1">Del Japones: {{ pais.translations.ja }}</span>
-            <span class="badge bg-primary mr-1">Del Italiano: {{ pais.translations.it }}</span>
-            <span class="badge bg-primary mr-1">Del Portuges: {{ pais.translations.pt }}</span>
-            <span class="badge bg-primary mr-1">Del Neerlandés: {{ pais.translations.nl }}</span>
-            <span class="badge bg-primary mr-1">Del Croata: {{ pais.translations.hr }}</span>
-            <span class="badge bg-primary mr-1">Del Persa: {{ pais.translations.fa }}</span>
-
-        </div>
+      <div class="col">
+        <span class="badge bg-primary mr-1"
+          >Del Aleman: {{ pais.translations.de }}
+        </span>
+        <span class="badge bg-primary mr-1"
+          >Del Español: {{ pais.translations.es }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Francés: {{ pais.translations.fr }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Japones: {{ pais.translations.ja }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Italiano: {{ pais.translations.it }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Portuges: {{ pais.translations.pt }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Neerlandés: {{ pais.translations.nl }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Croata: {{ pais.translations.hr }}</span
+        >
+        <span class="badge bg-primary mr-1"
+          >Del Persa: {{ pais.translations.fa }}</span
+        >
+      </div>
     </div>
 
-    <pre class="mt-5"> {{pais | json }} </pre>
-
-  
-
-</div>
+    <code><pre class="mt-5"> {{ pais | json }} </pre></code>
+  </div>
 </ng-template>
